@@ -8,7 +8,8 @@ const MongoDBStore = require("connect-mongodb-session")(session);
 const csrf = require("csurf");
 const flash = require("connect-flash");
 const multer = require("multer");
-
+const helmet = require("helmet");
+const compression = require("compression");
 const errorController = require("./controllers/error");
 const User = require("./models/user");
 const isAuth = require("./middlewares/is-auth");
@@ -66,6 +67,9 @@ app.use(
     store: store,
   })
 );
+
+app.use(helmet());
+app.use(compression());
 //use csrfProtection middleware after creating session;
 app.use(csrfProtection);
 app.use(flash());
