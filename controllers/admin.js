@@ -154,11 +154,7 @@ exports.postDeleteProduct = (req, res, next) => {
       if (!product) {
         return next("Product not found!");
       }
-      fs.unlink(product.imageUrl, (err) => {
-        if (err) {
-          return next(err);
-        }
-      });
+      fs.unlink(product.imageUrl, (err) => {});
       return product.remove();
       // Product.findOneAndRemove({ _id: prodId, userId: req.session.user._id })
       //   .then(() => {
