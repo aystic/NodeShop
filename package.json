@@ -2,6 +2,9 @@
   "name": "node-shop",
   "version": "1.0.0",
   "main": "app.js",
+  "engines": {
+    "node": "16.15.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
