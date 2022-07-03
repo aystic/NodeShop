@@ -68,7 +68,6 @@ app.use(
   })
 );
 
-app.use(helmet());
 app.use(compression());
 //use csrfProtection middleware after creating session;
 app.use(csrfProtection);
