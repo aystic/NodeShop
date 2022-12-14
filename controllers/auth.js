@@ -4,7 +4,7 @@ const crypto = require("crypto");
 const { validationResult } = require("express-validator/check");
 exports.getLogin = (req, res, next) => {
   // console.log(req?.session);
-  res.render("auth/login", {
+  res.render("./auth/login", {
     path: "/login",
     pageTitle: "Login",
     isAuthenticated: false,
@@ -18,7 +18,7 @@ exports.getLogin = (req, res, next) => {
 
 exports.getSignup = (req, res, next) => {
   console.log(req.flash("error")[0]?.toString());
-  res.render("auth/signup", {
+  res.render("./auth/signup", {
     path: "/signup",
     pageTitle: "Signup",
     isAuthenticated: false,
@@ -127,7 +127,7 @@ exports.postLogout = (req, res, next) => {
 };
 
 exports.getReset = (req, res, next) => {
-  res.render("auth/reset", {
+  res.render("./auth/reset", {
     path: "/reset",
     pageTitle: "Reset Password",
     isAuthenticated: false,
@@ -181,7 +181,7 @@ exports.getUpdate = (req, res, next) => {
   })
     .then((user) => {
       if (user) {
-        res.render("auth/update", {
+        res.render("./auth/update", {
           path: "/update",
           pageTitle: "Update Password",
           isAuthenticated: false,
