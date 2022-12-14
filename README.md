@@ -9,7 +9,7 @@ Login credentials :
 2. Email : user2@gmail.com , Password : user
 
 (Non restricted, All functions allowed)
-3. Email : user3@gmail.com, Password: user
+1. Email : user3@gmail.com, Password: user
 
 [![The Website](public/thumbnail.png)][youtube]
 
